@@ -13,7 +13,7 @@ public class Trainer {
 
     public Trainer() {
         //that's polymorphism for ye. Was too lazy to correct TrainerMain
-        //edgy little lazeball
+        //edgy little lazeball am I
     }
 
 
