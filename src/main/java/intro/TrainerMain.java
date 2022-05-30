@@ -10,7 +10,7 @@ public class TrainerMain {
         System.out.println(john.yearOfBirth);
 
         Trainer jack = new Trainer();
-        jack.name = "Jack Doehs";
+        jack.name = "Jack Doehs2";
         jack.yearOfBirth = 1990;
         System.out.printf("%s year of birth is: %d\n", jack.name, jack.yearOfBirth);
 
