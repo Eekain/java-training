@@ -8,7 +8,7 @@ public class LiterarlsMain {
         int age = 23;
         int salary = 100_000; // az olvashatóság kedvéért ezrenként használhatunk alvonást
         double vat = 21.14; // pont a tizedes karakter
-        boolean isComplete = false;
+        boolean isComplete = true;
         String favouriteColour = null;
         System.out.println(favouriteColour);
 
