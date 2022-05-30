@@ -2,8 +2,21 @@ package intro;
 
 public class Trainer {
 
-    String name;
-    int yearOfBirth;
+    private String name= "Anonymous";
+    private int yearOfBirth= 1900;
+
+    public Trainer(String name, int yearOfBirth) {
+        System.out.println("Construct trainer");
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    public Trainer() {
+        //that's polymorphism for ye. Was too lazy to correct TrainerMain
+        //edgy little lazeball
+    }
+
+
     public int getAge(int currentYear){
         return currentYear - yearOfBirth;
     }
@@ -21,5 +34,9 @@ public class Trainer {
 
     public void setYearOfBirth(int yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
+    }
+
+    public String getNameAndYearOfBirth(){
+        return String.format("%s: %d ", name, yearOfBirth);
     }
 }
