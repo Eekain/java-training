@@ -9,7 +9,7 @@ public class ModifyMain {
         List<Integer> numbers= new ArrayList<>(List.of(1,3,4));
         var it = numbers.iterator(); //this is an iterator
         while (it.hasNext()){
-            var number = it.next();
+            var number = it.next(); // újabb
             if (number % 2 == 0){
                 it.remove();
             }
