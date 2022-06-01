@@ -17,3 +17,11 @@ ne az src-be, hanem a teszt mappába tedd a teszteket.
 Alt enterrel lehet osztályhoz tesztet létrehozni
 @DisplayName("amit kiír balra, szépen")
 @TestMethodOrder(MethodOrderer.Random.class)
+
+teszteknél kisbetűs név, szóköz helyett alulvonás
+assertEquals -> String.equals()
+assertSame -> érték alapú egyenlőség
+
+Előfeltételeket:
+@BeforeEach
+//és ide létrehozom, amit akarok
