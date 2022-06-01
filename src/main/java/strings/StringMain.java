@@ -36,7 +36,7 @@ public class StringMain {
         String s = new String(bytes, StandardCharsets.UTF_8);
         String s4 = "    John Doe   ".strip();
         String s5 = ("    John Doe   ").trim();
-
+//mára befejezés, vettünk még StringBuildert
         System.out.println();
         System.out.println(s4);
         System.out.println(s5);
