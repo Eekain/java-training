@@ -2,17 +2,15 @@ package office;
 
 public class MeetingRoom {
     private String name;
-    private int length;
-    private int width;
+    private Dimension dimension;
 
     public MeetingRoom(String name, int length, int width) {
         this.name = name;
-        this.length = length;
-        this.width = width;
+        dimension = new Dimension(length, width);
     }
 
     public int getArea() {
-        return length * width;
+        return dimension.getArea();
     }
 
     public String getName() {
@@ -23,19 +21,7 @@ public class MeetingRoom {
         this.name = name;
     }
 
-    public int getLength() {
-        return length;
-    }
+    public void elongate(int difference){
 
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
     }
 }

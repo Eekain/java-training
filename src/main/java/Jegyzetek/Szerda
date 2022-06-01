@@ -25,3 +25,24 @@ assertSame -> érték alapú egyenlőség
 Előfeltételeket:
 @BeforeEach
 //és ide létrehozom, amit akarok
+
+metódusból null-t nem adunk vissza, vagy
+1) kivétel kezelés
+2) nullobjektet adunk vissza (új objekt, null értékekkel)
+3) "Optional"-t adunk vissza
+
+Optional<String> name = Optional.of("John Doe"); // ha teli
+Optional<String> nobody = Optional.empty(); // ha üres
+
+használat előtt:
+if(nobody.isPresent()){
+//do stuff
+} else {
+    System.out.println("nincs értéke!");
+}
+
+lambda:
+nobody.ifPresent(n -> System.out.pritnln(n);
+
+Delegálás - amikor a belsőbb osztálynak adja át a feladatot.
+//this.functionA(){ return Other.functionA(); }

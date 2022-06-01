@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class OfficeTest {
@@ -24,23 +25,17 @@ class OfficeTest {
 
     @Test
     void getNames() {
-        List<String> names = new ArrayList<>(List.of("Tárgyaló", "Aula", "Kistárgyaló", "Előadó", "Vizsgaterem"));
-
-        assertLinesMatch(names, office.getNames());
+        assertLinesMatch(List.of("Tárgyaló", "Aula", "Kistárgyaló", "Előadó", "Vizsgaterem"), office.getNames());
     }
 
     @Test
     void getNamesReverse() {
-        List<String> names = new ArrayList<>(List.of("Vizsgaterem", "Előadó", "Kistárgyaló", "Aula", "Tárgyaló"));
-
-        assertLinesMatch(names, office.getNamesReverse());
+        assertLinesMatch(List.of("Vizsgaterem", "Előadó", "Kistárgyaló", "Aula", "Tárgyaló"), office.getNamesReverse());
     }
 
     @Test
     void getEvenNames() {
-        List<String> names = new ArrayList<>(List.of("Tárgyaló", "Kistárgyaló", "Vizsgaterem"));
-
-        assertLinesMatch(names, office.getEvenNames());
+        assertLinesMatch(List.of("Tárgyaló", "Kistárgyaló", "Vizsgaterem"), office.getEvenNames());
     }
 
     @Test
@@ -74,11 +69,17 @@ class OfficeTest {
         assertNotEquals("Tárgyaló", office.getMeetingRoomsWithName("YZ65"));
 
     }
-/*
+
     @Test
     void getMeetingRoomsContains() {
-    }
+        var result = office.getMeetingRoomsContains("l");
+        assertEquals(2, result.size());
 
+
+        assertEquals(List.of("Tárgyaló", "Aula", "Kistárgyaló", "Előadó"), result.stream().map(MeetingRoom::getName).toList());
+
+    }
+/*
     @Test
     void getAreasLargerThan() {
     }

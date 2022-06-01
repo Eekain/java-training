@@ -22,6 +22,7 @@ class CalculatorTest {
        // Calculator calculator = new Calculator(); // GIVEN
         int result = calculator.add(5,6); // WHEN
         assertEquals(11, result); //THEN
+
     }
     @Test
     @DisplayName("With two positive numbers")

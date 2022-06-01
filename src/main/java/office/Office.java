@@ -2,6 +2,7 @@ package office;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Office {
     private List<MeetingRoom> meetingRooms = new ArrayList<>();
@@ -48,21 +49,33 @@ public class Office {
 
     }
 
-    public String getMeetingRoomsWithName(String name) {
+    public Optional<MeetingRoom> getMeetingRoomsWithName(String name) {
         //give back the name of the first occurence
+        /*
         for (MeetingRoom m : meetingRooms) {
             if (m.getName().equals(name)) {
                 return (m.getName());
             }
         }
         return "Not found";
+        */
+        for(var meetingRoom: meetingRooms){
+            if(meetingRoom.getName().equals(name)){
+                return Optional.of(meetingRoom);
+            }
+        }
+        return Optional.empty();
 
     }
 
-    public List<String> getMeetingRoomsContains(String part) {
-        List<String> res = new ArrayList<>();
-        //TODO
-        return res;
+    public List<MeetingRoom> getMeetingRoomsContains(String part) {
+        var result = new ArrayList<MeetingRoom>();
+        for(var meetingRoom: meetingRooms){
+            if(meetingRoom.getName().contains(part)){
+                result.add(meetingRoom);
+            }
+        }
+        return result;
     }
 
     public List<String> getAreasLargerThan(int area) {
