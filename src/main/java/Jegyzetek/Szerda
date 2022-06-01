@@ -1,0 +1,19 @@
+UMLet free uml szerkesztő program
+
+a jobb alsó properties részen lehet gyorsan írni , -- és tab használatábal, a rajzolást rendesen csinálja
+UML-ben nem minden osztályt kell leírni, csak a legfontosabbakat (mondjuk max tíz)
+
+
+minden egyes típusnak van eyg statikus metódusa, ami átalakítja egyikből a másikba: parse
+pl: Integer.parseInt()
+
+Az enum olyan osztály, melynek elemei statikus példányúak, és előre megadottak.
+
+enumba lehet attribútumokat fölvenni
+
+tesztek:
+pomba fel kell venni a jupiter motort,
+ne az src-be, hanem a teszt mappába tedd a teszteket.
+Alt enterrel lehet osztályhoz tesztet létrehozni
+@DisplayName("amit kiír balra, szépen")
+@TestMethodOrder(MethodOrderer.Random.class)
