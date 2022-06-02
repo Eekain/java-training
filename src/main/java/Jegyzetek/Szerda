@@ -46,3 +46,20 @@ nobody.ifPresent(n -> System.out.pritnln(n);
 
 Delegálás - amikor a belsőbb osztálynak adja át a feladatot.
 //this.functionA(){ return Other.functionA(); }
+
+feladat
+    protokoll, ://, domain név, pass, paraméterek (név/értékpárok)
+    URL osztály
+    a konstruktor egy url stringet kap, ezt bontsuk fel, és tegyük getter metódusokra
+péééélda (incomplete):
+https://github.com/vicziani/jtechlog-java-roadmap
+
+//megkaptam, hogy bár oké, ahogy csináltam, jobb lett volna Scanner objektummal végigfutni rajta, alkalmasint useDelimiter()-t alkalmazni rajta
+
+throws Exception-ra tesztestet:
+@Test
+void testCreateWithEmptyName(){
+    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+    () -> new Employee(""));
+assertEquals("Name can not be empty!", exception.getMessage();
+}
