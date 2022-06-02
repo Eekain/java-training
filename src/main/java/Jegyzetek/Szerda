@@ -63,3 +63,21 @@ void testCreateWithEmptyName(){
     () -> new Employee(""));
 assertEquals("Name can not be empty!", exception.getMessage();
 }
+
+Clean code szabály: konstruktoban, vagy metódusban bepasszolt boolean helyett használjunk enum-ot!
+
+kiírás: Files.write(Paths.get("names.txt"), <beadott szöveg>);
+kiírás tesztelése: @TempDir
+
+Fluent API // void helyett return this -  így sorra önmagára hívásláncot lehet csinálni.
+
+attributum + (getter + setter) = property
+
+
+sima
+
+{
+ System.out.println("Inicializátor blokk, a konstruktor előtt fut le");
+}
+
+esetén ez a klasszik nemhasznált cucc
