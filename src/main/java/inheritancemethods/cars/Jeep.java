@@ -1,27 +1,34 @@
 package inheritancemethods.cars;
 
 public class Jeep extends Car {
-    double fuelRate;
-    double fuel;
-    double tankCapacity;
-    double extraCapacity;
-    double extraFuel;
+
+    private double extraCapacity;
+    private double extraFuel;
 
     public Jeep(double fuelRate, double fuel, double tankCapacity, double extraCapacity, double extraFuel) {
         super(fuelRate, fuel, tankCapacity);
         this.extraCapacity = extraCapacity;
         this.extraFuel = extraFuel;
     }
+@Override
+    public void modifyFuelAmount(double fuelBy) {
+        if(fuelBy > getExtraFuel()){
+            fuelBy -= getExtraFuel();
+            setExtraFuel(0);
+        } else {
+            modifyExtraFuelAmount(-fuelBy);
 
-    public void modifyFuelAmount(double fuel) {
-        super.modifyFuelAmount(fuel);
+        }
+        super.modifyFuelAmount(fuelBy);
     } // örökölt metódus az ősosztályból, nem kell felülírni
+
+    private void modifyExtraFuelAmount(double fuel) {
+        extraFuel += fuel;
+    }
 
     @Override
     public void drive(int km) {
-        System.out.println(super.getFuelRate());
         double consumption = km * super.getFuelRate() / 100;
-        System.out.println(consumption);
         setFuel((getFuel() + getExtraFuel()) - consumption + 30);
         setExtraFuel(0);
 
@@ -29,20 +36,14 @@ public class Jeep extends Car {
 
     @Override
     public double getFuel() {
-        return fuel;
+        return super.getFuel();
     }
 
     public void setFuel(double fuel) {
-        this.fuel = fuel;
+        super.setFuel(fuel);
     }
 
-    public double getTankCapacity() {
-        return tankCapacity;
-    }
 
-    public void setTankCapacity(double tankCapacity) {
-        this.tankCapacity = tankCapacity;
-    }
 
     public double getExtraCapacity() {
         return extraCapacity;

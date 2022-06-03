@@ -1,6 +1,6 @@
 oktatás git linkje a tanár órai munkáival:
 https://github.com/Training360/java-bgn-2022-05-30.git
-
+ezt is csekkold: https://github.com/Training360/java-bsc-public
 UMLet free uml szerkesztő program
 
 a jobb alsó properties részen lehet gyorsan írni , -- és tab használatábal, a rajzolást rendesen csinálja
@@ -127,3 +127,12 @@ default int getBasePrice(){
 return 0;
 }
 
+Multicatch úgy működik, hogy |
+minthogy: catch (IllegalStateException | IllegalArgumentException e){{}
+
+try-with-resources
+
+try(<resources, eg: scanner>){
+    String first = scanner.nextLine() etc...
+} catch (IOE e){
+}
