@@ -1,3 +1,6 @@
+oktatás git linkje a tanár órai munkáival:
+https://github.com/Training360/java-bgn-2022-05-30.git
+
 UMLet free uml szerkesztő program
 
 a jobb alsó properties részen lehet gyorsan írni , -- és tab használatábal, a rajzolást rendesen csinálja
@@ -99,4 +102,28 @@ az így példányosított (inicializált) objektumra CSAK a statikus típus met�
 <<<private>protected>public>
 leszármazottban az @Override-olt metódus publikussági módosítója csak azonos, vagy nyíltabb körű lehet, szűkebb nem
 Overrideolni lehet a visszatérési típust is, az ős leszármazottjára, ha szüksége van rá (pl: copy());
+
+abstrakt class = van konstruktor
+interface = nincs konstruktor;
+
+Marker interface = olyan interface, aminek nincs metódusa
+//ritkánhasznált
+
+final - nem lehet leszármaztatni, ha osztályról van szó
+egy osztály több interface-t is implementálhat
+
+instanceof operátor
+megvizsgálja, hogy az adott változó dinamikus típusa milyen kapcsolatban áll a jobb oldali arggal
+car instanceof vehicle //true
+car instanceof bicycle // false
+//két objektumot hasonlít össze
+
+egy interface több interface-t is kiterjeszthet
+(extends) ... interfészek között töbszörös öröklődés van
+
+Default interface metódus
+ha default kulcsszóval látjuk el, onnantól kezdve lehet implementációja a metódusnak az interface-en belül.
+default int getBasePrice(){
+return 0;
+}
 
