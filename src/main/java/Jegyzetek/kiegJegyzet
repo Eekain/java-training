@@ -81,3 +81,22 @@ sima
 }
 
 esetén ez a klasszik nemhasznált cucc
+
+Kompozíció/Inheritance
+Az öröklődés kezd elavult tech lenni, inkább a kompozíció felé megy az ipar, mi szerint a használni kívánt ősosztályt példányosítja az attribútumok között.
+Főleg azért avul el, mert futás közbena z öröklött őst nem lehet változtatni - ellenben a kompozíció tagjaival.
+
+Interface: csak absztrakt metódusok vannak benne
+
+statikus típus - dinamikus típus
+értékadáskor:
+List<> l = new ArrayList<>();
+<statikus típus > = <dinamikus típus>
+a statikus nem változik, és a dinamikus típusnak vagy őse, vagy önmaga
+a dinamikus tipus változhat, akár futás közben is, amennyiben a benne levő adatok konvertálhatóak (vagy ha üres);
+
+az így példányosított (inicializált) objektumra CSAK a statikus típus metódusait lehet hívni....
+<<<private>protected>public>
+leszármazottban az @Override-olt metódus publikussági módosítója csak azonos, vagy nyíltabb körű lehet, szűkebb nem
+Overrideolni lehet a visszatérési típust is, az ős leszármazottjára, ha szüksége van rá (pl: copy());
+
