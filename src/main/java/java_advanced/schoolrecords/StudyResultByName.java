@@ -1,10 +1,10 @@
 package java_advanced.schoolrecords;
 
-public class StudentResultByName {
+public class StudyResultByName {
     private String studentName;
     private double average;
 
-    public StudentResultByName(String studentName, double average) {
+    public StudyResultByName(String studentName, double average) {
         this.studentName = studentName;
         this.average = average;
     }
@@ -13,7 +13,7 @@ public class StudentResultByName {
         return studentName;
     }
 
-    public double getAverage() {
+    public double getStudyAverage() {
         return average;
     }
 }

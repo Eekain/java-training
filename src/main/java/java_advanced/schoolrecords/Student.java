@@ -12,7 +12,7 @@ public class Student {
     public double calculateAverage(){
         double avg = 0;
         for(Mark m : marks){
-            avg += m.getMarktype().mark;
+            avg += m.getMarkType().value;
 
         }
         avg /= marks.size();
@@ -22,16 +22,15 @@ public class Student {
         double res = 0;
         for(var m : marks){
             if(m.getSubject().equals(subject)){
-                res += m.getMarktype().mark;
+                res += m.getMarkType().value;
             }
         }
         res /= marks.size();
         return res;
     }
 
-    public Student(String name, List<Mark> marks) {
+    public Student(String name) {
         this.name = name;
-        this.marks = marks;
     }
 
     public String getName() {

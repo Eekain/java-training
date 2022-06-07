@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class UrlTest {
     Url url = new Url("http://test.com/testapp/test.do?test_id=1&test_name=SS");
 
