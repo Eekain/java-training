@@ -1,0 +1,16 @@
+ var - java9 óta
+ var names = new ArrayList<String>(); //ha a statikus típusban nincs meghatározva, akkor a dinamikus típusban kell megadni a diamond operátorban a kezelt objektumtípust
+ var-t csak lokális változóknál illik használni
+ ###gyors összefoglaló volt a múlt heti basic alatt
+ hétfő déllelőtt: projektfeladat
+
+read in from CSV file for tutors and subjects...?
+name, subject
+XY | physics
+remove studentnél paraméterül a nevet használjuk
+findstudentbyname: ha nincs, optionalt return
+
+teszt...
+a nyilak meghívást (általában lista formában) jelentenek
+
+a konstruktor után a metódusok sorrendje a hívás sorrendjében legyen

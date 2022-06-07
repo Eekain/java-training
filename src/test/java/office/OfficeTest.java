@@ -1,6 +1,7 @@
 package office;
 
-import calculator.Calculator;
+import java_basic.office.MeetingRoom;
+import java_basic.office.Office;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
-import static org.junit.jupiter.api.Assertions.*;
 
 class OfficeTest {
     Office office;

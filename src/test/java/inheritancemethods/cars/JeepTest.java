@@ -1,5 +1,6 @@
 package inheritancemethods.cars;
 
+import java_basic.cars.Jeep;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
