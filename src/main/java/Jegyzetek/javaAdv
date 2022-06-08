@@ -49,3 +49,51 @@ megtartja a berakás sorrrendjét
 Java nyelven van a Deque (dekk) interfész, ami a queue interface leszármazottja, ami egy kétvégű sor, aminek mindkét végéhez hozzá lehet férni.... ezt használjuk verem helyett
 
 ArrayDeque - a stack (és deque) implementálása.
+
+Map: egy interfész, különböző implementációkkal
+
+kollekciók tesztelését különösen támogatja a library: AssertJ
+
+foreach az olvasásra szolgál, módosítást Iterator-os bejárásnál lehet.
+
+comparator/comparable
+
+ha nincs megadva comparator (tehát comparable alapján történik a rendezés) akkor a "Natural order" alapján történik rendezés
+
+
+COLLATOR
+Collections.sort(names, Collator.getInstance(new Locale("hu","HU")));
+//így magyar lokále alapján rendez
+
+Collections.osztály
+statikus metódusok gyűjteménye
+unmodifyable - egy módosíthatatlan nézetét adja vissza az osztálynak.
+
+shallow copy:
+referfenciát másol
+deep copy:
+új objektumot hoz létre, eredeti értékeivel
+
+
+lambda
+ötlet: át lehessen adni fügvényt paraméterként
+names.forEach((String name) -> {System.out.println(name);});
+//VAGY
+names.forEach(name ->System.out.println(name));
+
+names.replaceAll(name -> na,me.toUpperCase());
+names.replaceAll(String::toUpperCase);
+a lambda kifejezések mögött mindíg olyan interfész van, amiben csak egy metódus van
+
+
+
+
+
+forEach      Egy object a paraméter, void a visszatérési típus : Consumer
+replaceAll   Egy object paraméter, azonos típusú visszatérés: UnaryOperator
+removeIf     Egy object paraméter, logikai érték visszatérés: Predicate
+
+(68 funkcionális interfész van a Java nyelvben)
+
+streamek
+
