@@ -1,4 +1,4 @@
-package java_advanced.innerclasses;
+package java_advanced.collections.innerclasses;
 
 import java.util.Comparator;
 

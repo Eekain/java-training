@@ -1,9 +1,7 @@
-package java_advanced.innerclasses;
+package java_advanced.collections.innerclasses;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.LinkedHashSet;
 import java.util.List;
 
 public class ComparatorDemo {

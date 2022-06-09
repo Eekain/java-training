@@ -96,4 +96,42 @@ removeIf     Egy object paraméter, logikai érték visszatérés: Predicate
 (68 funkcionális interfész van a Java nyelvben)
 
 streamek
+forrás (1) - közbülső elemek (x) - záró elem (1);
 
+funkcionális programozás
+nem az objektum az alap, hanem a függvény:
+a függvényeket lehet kezelni,
+
+Supplier : in: void; out : T
+Consumer : in: T; out: void
+BiConsumer: in: T, U; out : void
+Predicate: in: T,; out : boolean
+BiPredicate: in: T, U; out : boolean
+Function: in: T; out: U
+BiFunction: in: T, U; out: R
+UnaryOperator: in: T, out: T
+BinaryOperator: in: T, T; out: T
+
+A főbb funkcionális interfészek (lambdában használhatók) ezek közé tartoznak.
+
+Big data: ahol egy számítógép már nem elég az adatok feldolgozására.
+
+záró műveletek
+count
+min/max
+findany/findfirst
+allmatch/anymatch/nonematch
+foreach
+reduce
+collect
+
+
+Collectors
+
+
+(CounterResult::new, CounterResult::accept, CounterResult::addAll)
+a  kollektor ezt egyszerűsíti, hiszen tartalmazza mindhárom összetevőt
+
+előre definiált collectorok:
+String: joining
+Matematikai: avg, count, max, min, sum, summarize

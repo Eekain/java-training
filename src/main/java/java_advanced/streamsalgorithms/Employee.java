@@ -1,9 +1,10 @@
 package java_advanced.streamsalgorithms;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.OptionalInt;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+import static java.lang.Math.min;
 
 public class Employee {
     private String name;
@@ -48,10 +49,11 @@ public class Employee {
         System.out.println("Counting the Old Ones: " + oldOnesCount);
         int earliest = employees.stream().mapToInt(Employee::getYearOfBirth).min().orElseThrow();
         System.out.println("The oldest in number of years is: "+ earliest);
-        //String earliestName = employees.stream().sorted(Comparator.compare((e1, e2) -> e1.getYearOfBirth() - e2.getYearOfBirth())).findFirst();// nope, noot yet
+        //String earliestName = employees.stream().filter(e -> e.getYearOfBirth() == (int) min(employees.stream().mapToInt(x -> x.getYearOfBirth()))).findFirst();
         //System.out.println(earliestName); //6. feladat //allmatch fügvény
         //7. Add vissza, hogy igaz-e, hogy minden alkalmazott 1980 előtt született.
-        boolean are;
+        boolean are  = employees.stream().allMatch(s -> s.getYearOfBirth()<1990);
+        System.out.println("Every one of the employees were born before 1990: "+are);
         //8. Add vissza egy listában az összes, 1990-nél korábban született alkalmazotztat!
         List<Employee> oldOnes = employees.stream().filter(employee -> employee.getYearOfBirth()<1990).toList();
         System.out.println("List of old Ones: " + oldOnes);
@@ -64,4 +66,5 @@ public class Employee {
 
 
     }
+
 }
