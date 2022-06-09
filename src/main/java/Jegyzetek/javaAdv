@@ -135,3 +135,6 @@ a  kollektor ezt egyszerűsíti, hiszen tartalmazza mindhárom összetevőt
 előre definiált collectorok:
 String: joining
 Matematikai: avg, count, max, min, sum, summarize
+
+Files.lines = file-ból streamek
+
