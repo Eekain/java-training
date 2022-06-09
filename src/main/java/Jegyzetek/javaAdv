@@ -138,3 +138,11 @@ Matematikai: avg, count, max, min, sum, summarize
 
 Files.lines = file-ból streamek
 
+Pattern pattern = Pattern.compile("href=\"([^\"]+)\"");
+Matcher matcher = pattern.matcher("""
+        bodyContentMeghivo = 'Nyilatkozatot, bejelentést, vagy felhasználási kérelmet készül küldeni a(z) <strong><a href="mailto:{emailAddress}" target="_blank" class="email">{emailShow}</a></strong> címen a lapigazgatónak.Fontos nekünk, ezért az adataira is nagyon vigyázunk, ahogy az <a href="https://index.hu/adatvedelem" target="_blank">adatvédelmi tájékoztatónkban</a> részletezzük is. Ha Önnek is oké, kattintson az OK gombra.'
+        """);
+
+
+
+kollekcíiót kibontani streambe: flatMap(l -> getLinkWithRegexp(l).stream())
