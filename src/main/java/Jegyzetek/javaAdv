@@ -179,3 +179,11 @@ IO kezelések:
                 Bináris | Szöveges
 Írás:       OutputStream    Writer
 Olvasás:    InputStream     Reader
+
+
+ha direkt jarból akarsz olvasni:
+new BufferedReader(new InputStreamReader(ClassName.class.getResourceAsStream("/hello.txt")))){
+read.lines()
+.forEach(System.out::println);
+}
+//teszed ezt, mert a program mellé akarsz becsomagolni fájlt, és azta Resources mappába teszed
