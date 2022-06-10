@@ -1,7 +1,5 @@
 package java_advanced.functional;
 
-import org.assertj.core.util.VisibleForTesting;
-
 import java.util.stream.Collector;
 
 public class CounterResult {

@@ -1,9 +1,11 @@
 package java_advanced.indexreader;
 
+import java.io.Console;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -48,6 +50,8 @@ public class IndexReader {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.err.println("This is an error console output");
+
 
     }
 }

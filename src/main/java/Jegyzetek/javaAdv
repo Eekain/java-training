@@ -145,4 +145,37 @@ Matcher matcher = pattern.matcher("""
 
 
 
-kollekcíiót kibontani streambe: flatMap(l -> getLinkWithRegexp(l).stream())
+kollekciót kibontani streambe: flatMap(l -> getLinkWithRegexp(l).stream())
+int x = switch(i){
+...
+}
+//viszonylag új viselkedés, hogy ezzel is lehet adni értéket
+
+
+Clock-ot általában tesztelésnél használjuk:
+Clock clock = Clock.fixed(2019, 1, 1, 0, 0, 0).atZone(ZoneId.systzemDefault()).toIntsant(), ZoneId.systemDefault());
+LocalDateTime nowWithClock = new LocalDateTime.now(clock); // ezzel meg lehet adni egy időt, ami nem a valódi idó
+
+I18n
+//internationalization - 18 karakter az i és az n között
+
+az a módszer, mely lehetővé teszi többnyelvű alkalmazások fejlesztését
+
+resource bundle
+a resources könyvtárba kell tenni
+
+ resuource format, message format
+ //ritkán használt
+
+ interfész a naplózásra:
+ slf4j
+ ennek implementciói:
+   - log4j //elavult, meg...kínos
+   - Logback
+   - Apache commons logging
+   - java.util.Logging
+
+IO kezelések:
+                Bináris | Szöveges
+Írás:       OutputStream    Writer
+Olvasás:    InputStream     Reader
