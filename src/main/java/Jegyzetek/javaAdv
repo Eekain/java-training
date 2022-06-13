@@ -187,3 +187,15 @@ read.lines()
 .forEach(System.out::println);
 }
 //teszed ezt, mert a program mellé akarsz becsomagolni fájlt, és azta Resources mappába teszed
+
+
+A teszten 3-4 példát rontotál el, az 80-86%-nak felel meg
+
+A List<Object>-nek NEM leszármazottja a List<String> és nem is lehet értékül adni neki.
+
+
+bytecode-manipuláció : cgLib
+tudsz futó programon belül reflection-nel módosítani ezzel. E nélkül csak lekérdezni.
+
+
+például: entitásokat akár fájlból beolvasva is tudsz... a lastdaypractice erre lenne njó (nálam nem sikerült rendes ,műűködésre bírni, de a képzés gitoldalán még jó)
