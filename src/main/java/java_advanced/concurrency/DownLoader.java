@@ -13,7 +13,7 @@ public class DownLoader {
 
         ExecutorService service = Executors.newFixedThreadPool(80);
         long start =  System.currentTimeMillis();
-        var tasks = IntStream.range(0,500).mapToObj( i -> new DownloadTask()).toList();
+        var tasks = IntStream.range(0,50000).parallel().mapToObj( i -> new DownloadTask()).toList();
 
         var results = service.invokeAll(tasks);
 

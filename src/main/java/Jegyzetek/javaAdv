@@ -199,3 +199,8 @@ tudsz futó programon belül reflection-nel módosítani ezzel. E nélkül csak 
 
 
 például: entitásokat akár fájlból beolvasva is tudsz... a lastdaypractice erre lenne njó (nálam nem sikerült rendes ,műűködésre bírni, de a képzés gitoldalán még jó)
+
+https://start.spring.io/
+//generál egy kezdő projekt-magvat
+
+controllereket kell implementálni benne. Ezek kezelik a bejövő http kéréseket
